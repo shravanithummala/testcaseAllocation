@@ -1,6 +1,6 @@
 package testcaseAllocation;
 
-import java.util.Scanner;
+import java.util.Arrays;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -12,14 +12,11 @@ public class InputValidator {
 	public static void main(String[] args) {
 
 		InputValidator inputValidator = new InputValidator();
-
-		// Using Scanner for Getting Input from User
-		Scanner in = new Scanner(System.in);
-
-		inputValidator.vmCount = in.nextInt();
-		String[] st = in.nextLine().split(",");
-
-		in.close();
+		
+		System.out.println(Arrays.toString(args));
+		
+		inputValidator.vmCount = Integer.valueOf(args[0]);
+		String[] st = args[1].split(",");
 
 		inputValidator.validateInputs(st);
 
