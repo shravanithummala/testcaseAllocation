@@ -86,7 +86,7 @@ public class TestcasesListsGenerator {
 
 		int vmTime = 0; // totaltimeofVM will always have time in minutes
 
-		String path = "C:\\Users\\preet\\Desktop\\";
+		String path = System.getProperty("user.home") + "/Desktop";
 
 		String folderPath = path + java.time.LocalDate.now();
 
@@ -139,7 +139,7 @@ public class TestcasesListsGenerator {
 
 	private void generateLogs() {
 
-		String path = "C:\\Users\\preet\\Desktop\\";
+		String path = System.getProperty("user.home") + "/Desktop";
 		String folderPath = path + java.time.LocalDate.now();
 
 		FileHandler handler;

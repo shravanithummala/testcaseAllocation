@@ -12,9 +12,9 @@ public class InputValidator {
 	public static void main(String[] args) {
 
 		InputValidator inputValidator = new InputValidator();
-		
+
 		System.out.println(Arrays.toString(args));
-		
+
 		inputValidator.vmCount = Integer.valueOf(args[0]);
 		String[] st = args[1].split(",");
 
@@ -38,9 +38,7 @@ public class InputValidator {
 			} catch (Exception e) {
 				generateFailureLogs(e.getMessage());
 				System.exit(0);
-				;
 			}
-
 			generateTestcasesLists();
 		}
 
