@@ -1,5 +1,6 @@
 package testcaseAllocation;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -46,8 +47,12 @@ public class InputValidator {
 
 	private void generateFailureLogs(String error) {
 
-		String path = "C:\\Users\\preet\\Desktop\\";
+		String path = System.getProperty("user.home") + "\\Desktop\\";
 		String folderPath = path + java.time.LocalDate.now();
+		
+		//creates folder
+		File f1 = new File(folderPath);
+		f1.mkdir();
 
 		FileHandler handler;
 		try {
